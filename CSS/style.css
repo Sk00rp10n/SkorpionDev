@@ -726,3 +726,35 @@ footer p {
         display: none; /* Esconde em telas muito pequenas */
     }
 }
+/* ===== CORREÇÃO URGENTE - IMAGEM FIXA NO TOPO ===== */
+.hacker-image-container {
+    position: fixed !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999 !important;
+    text-align: center;
+    background: rgba(0, 15, 0, 0.98) !important;
+    border: 1px solid #0f0 !important;
+    border-top: none !important;
+    border-radius: 0 0 15px 15px !important;
+    padding: 15px 25px !important;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8) !important;
+    backdrop-filter: blur(5px);
+    width: auto !important;
+    margin: 0 !important;
+}
+
+/* GARANTE QUE NÃO TENHA MARGIN/PADDING CONFLITANTE */
+body {
+    padding-top: 140px !important; /* Espaço pra imagem fixa */
+}
+
+/* SE TIVER ISSO NO TEU CSS, REMOVE: */
+/*
+.hacker-image-container {
+    animation: qualquer-coisa...
+    margin: qualquer-coisa...
+    position: relative...
+}
+*/
