@@ -613,3 +613,95 @@ footer p {
         padding: 20px;
     }
 }
+/* IMAGEM HACKER BRAVA */
+.hacker-image-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.hacker-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #0f0;
+    padding: 3px;
+    background: rgba(0, 20, 0, 0.8);
+    box-shadow: 0 0 20px #0f0, 0 0 40px rgba(0, 255, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hacker-img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 30px #0f0, 0 0 60px rgba(0, 255, 0, 0.5);
+}
+
+.neon-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid #0f0;
+    border-radius: 50%;
+    animation: neonPulse 2s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.binary-border {
+    background: rgba(0, 15, 0, 0.9);
+    border: 1px solid #0f0;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.binary-text {
+    color: #0f0;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #0f0;
+    animation: scrollBinary 10s linear infinite;
+    white-space: nowrap;
+    display: block;
+}
+
+/* ANIMAÇÕES NOVAS */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes scrollBinary {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hacker-image-container {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .hacker-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .binary-text {
+        font-size: 8px;
+    }
+}
